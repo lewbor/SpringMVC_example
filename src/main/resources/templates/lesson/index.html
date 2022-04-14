@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <title>Lessons</title>
+</head>
+
+<body>
+
+<table>
+    <tr th:each="lesson: ${lessons}">
+        <td>
+            <a th:href="@{/lesson/{id}/edit(id=${lesson.id})}">Edit</a>
+        </td>
+        <td th:text="${lesson.id}"></td>
+        <td th:text="${lesson.name}"></td>
+    </tr>
+</table>
+</body>
+</html>
